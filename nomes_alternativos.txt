@@ -1,0 +1,26 @@
+Amiya Caster;Amiya Caster,Amiya
+Amiya Medic;Amiya Medic,Amiya
+Amiya Guard;Amiya Guard,Amiya
+Ch'en Alter;Ch'en Alter,Ch'en the Holungday
+Civilight Eterna;Civilight Eterna,Theresa
+Executor Alter;Executor Alter,Executor the Ex Foedere
+Eyjafjalla Alter;Eyjafjalla Alter,Eyjafjalla the Hvít Aska
+Fang Alter;Fang Alter,Fang the Fire-sharpened
+Gavial Alter;Gavial Alter,Gavial the Invincible
+Greyy Alter;Greyy Alter,Greyy the Lightningbearer
+Hibiscus Alter;Hibiscus Alter,Hibiscus the Purifier
+Jessica Alter;Jessica Alter,Jessica the Liberated
+Kroos Alter;Kroos Alter,Kroos the Keen Glint
+Lava Alter;Lava Alter,Lava the Purgatory
+Nearl Alter;Nearl Alter,Nearl the Radiant Knight
+Noir Corne Alter;Noir Corne Alter,Rathalos S Noir Corne
+Reed Alter;Reed Alter,Reed The Flame Shadow
+Siege Alter;Siege Alter,Vina Victoria
+Silence Alter;Silence Alter,Silence the Paradigmatic
+Skadi Alter;Skadi Alter,Skadi the Corrupting Heart
+Specter Alter;Specter Alter,Specter the Unchained
+Swire Alter;Swire Alter,Swire the Elegant Wit
+Texas Alter;Texas Alter,Texas the Omertosa
+Yato Alter;Yato Alter,Kirin R Yato
+W Alter;W Alter,Wis'adel
+Virtuosa;Virtuosa,Arturia

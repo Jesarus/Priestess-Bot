@@ -1,0 +1,4 @@
+TOKEN = "MTM2ODIzMjYyNDYyNzM4NDQ0MQ.G5vYZX.LlVXv2bteLyb3If7WCKpnLz6CP4DROWWVv5FD0"
+PONTUACOES_PATH = "pontuacoes.txt"
+PASTA_ORIGINAIS = "Imagens Originais"
+PASTA_SILHUETAS = "Imagens Ofuscadas"
