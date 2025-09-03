@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+ENV/
+.env/
+.venv/
+
+# VSCode
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Dados e arquivos sensíveis
+config.py
+pontuacoes.json
+
+# Imagens
+Imagens Ofuscadas/
+Imagens Originais/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Em desenvolvimento
+db.py
