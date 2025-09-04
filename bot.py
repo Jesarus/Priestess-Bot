@@ -1,13 +1,18 @@
 import interactions
 from config import TOKEN
 
-bot = interactions.Client(token=TOKEN, intents=interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT)
+bot = interactions.Client(
+    token=TOKEN,
+    intents=interactions.Intents.DEFAULT | interactions.Intents.MESSAGE_CONTENT,
+)
+
 
 @bot.event
 async def on_ready():
-    print(f"Bot conectado como {bot.me.name}")
+    print(f"Bot connected as {bot.me.name}")
 
-# Registrar a extensão de slash commands
+
+# Load the slash commands extension
 bot.load_extension("commands.guess_who")
 
 bot.start()

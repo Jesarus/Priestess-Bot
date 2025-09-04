@@ -3,18 +3,18 @@ import os
 import json
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utils import carregar_nomes_alternativos
+from utils import load_alternative_names
 
-def test_carregar_nomes_alternativos(tmp_path):
-    # Cria um arquivo temporário de nomes alternativos em JSON
-    arquivo = tmp_path / "nomes_alternativos.json"
-    dados = {
+def test_load_alternative_names(tmp_path):
+    # Create a temporary alternative names JSON file
+    file = tmp_path / "alternative_names.json"
+    data = {
         "Amiya": ["Amiya", "Amiya Caster"],
         "Ch'en": ["Ch'en", "Ch'en the Holungday"]
     }
-    arquivo.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
-    nomes = carregar_nomes_alternativos(str(arquivo))
-    assert "amiya" in nomes
-    assert "ch'en" in nomes
-    assert "amiya caster" in nomes["amiya"]
-    assert "ch'en the holungday" in nomes["ch'en"]
+    file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    names = load_alternative_names(str(file))
+    assert "amiya" in names
+    assert "ch'en" in names
+    assert "amiya caster" in names["amiya"]
+    assert "ch'en the holungday" in names["ch'en"]

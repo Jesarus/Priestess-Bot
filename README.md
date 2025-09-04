@@ -1,110 +1,110 @@
+
 # Priestess-Bot
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Um bot de Discord para gerenciamento do servidor e interações divertidas com relação ao jogo **Arknights**, como:
-- Quizzes de adivinhação de personagens do jogo com sistema de pontuação, manipulação de imagens e suporte a nomes alternativos.
+A Discord bot for server management and fun interactions related to the game **Arknights**, such as:
+- Character guessing quizzes with a scoring system, image manipulation, and support for alternative names.
 
 ---
 
-## Diferenciais do Priestess-Bot
+## Priestess-Bot Highlights
 
-- **Comandos Slash modernos:** Utiliza comandos slash do Discord para experiência intuitiva e integrada.
-- **Integração com imagens:** Gera e manipula imagens automaticamente, criando quizzes visuais únicos.
-- **Jogo interativo:** Modo “Guess Who” desafia usuários a adivinhar personagens a partir de silhuetas.
-- **Ranking em tempo real:** Sistema de pontuação persistente e ranking dos melhores jogadores.
-- **Nomes alternativos:** Aceita múltiplas respostas corretas para maior acessibilidade.
-- **Respostas privadas (ephemeral):** Garante privacidade e experiência moderna nas interações.
-- **Código limpo e testado:** Estrutura modular, testes automatizados e uso de boas práticas.
-
----
-
-## Funcionalidades
-
-- **Jogo Guess Who:** Envia uma imagem ofuscada de um personagem e desafia os usuários a adivinharem quem é.
-- **Sistema de pontuação:** Pontuação persistente para os participantes.
-- **Nomes alternativos:** Aceita diferentes nomes para o mesmo personagem.
-- **Geração automática de silhuetas:** Cria imagens ofuscadas a partir das originais.
+- **Modern Slash Commands:** Uses Discord slash commands for an intuitive and integrated experience.
+- **Image Integration:** Automatically generates and manipulates images, creating unique visual quizzes.
+- **Interactive Game:** “Guess Who” mode challenges users to guess characters from silhouettes.
+- **Real-Time Ranking:** Persistent scoring system and leaderboard for top players.
+- **Alternative Names:** Accepts multiple correct answers for greater accessibility.
+- **Private (ephemeral) responses:** Ensures privacy and a modern user experience.
+- **Clean and tested code:** Modular structure, automated tests, and best practices.
 
 ---
 
+## Features
 
-## Exemplo de uso
+- **Guess Who Game:** Sends an obscured image of a character and challenges users to guess who it is.
+- **Scoring system:** Persistent scores for participants.
+- **Alternative names:** Accepts different names for the same character.
+- **Automatic silhouette generation:** Creates obscured images from the originals.
+
+---
+
+## Usage Example
 
 ```
 /guess_who
 ```
-O bot responde com uma imagem silhuetada e aguarda a resposta dos usuários.
+The bot replies with a silhouette image and waits for users' answers.
 
-[Veja um exemplo em imagem](https://drive.google.com/file/d/1VeAJHNcv65lXXQJEl6S9bsz9iJm8nBU4/view?usp=sharing)
+[See an example image](https://drive.google.com/file/d/1VeAJHNcv65lXXQJEl6S9bsz9iJm8nBU4/view?usp=sharing)
 
 ---
 
-## Instalação
+## Installation
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
 	```sh
 	git clone https://github.com/Jesarus/Priestess-Bot.git
 	cd Priestess-Bot
 	```
 
-2. **(Opcional) Crie um ambiente virtual:**
+2. **(Optional) Create a virtual environment:**
 	```sh
 	python -m venv venv
 	.\venv\Scripts\activate
 	```
 
-3. **Instale as dependências:**
+3. **Install dependencies:**
 	```sh
 	pip install -r requirements.txt
 	```
 
-4. **Organize as imagens:**
-	- Certifique-se de que as pastas `Imagens Originais` e `Imagens Ofuscadas` estejam presentes e organizadas por personagem.
+4. **Organize the images:**
+	- Make sure the folders `Imagens Originais` and `Imagens Ofuscadas` are present and organized by character.
 
 ---
 
-## Como rodar
+## How to Run
 
 ```sh
 python bot.py
 ```
-O bot irá conectar ao Discord e ficará pronto para receber comandos.
+The bot will connect to Discord and be ready to receive commands.
 
 ---
 
-## Estrutura dos arquivos
+## File Structure
 
-- `bot.py`: Inicializa o bot e carrega os comandos.
-- `commands/guess_who.py`: Comando principal do quiz.
-- `image_utils.py`: Funções para manipulação e ofuscação de imagens.
-- `pontuacao.py`: Sistema de pontuação dos usuários.
-- `utils.py`: Utilitários para nomes alternativos.
-- `nomes_alternativos.json`: Lista de nomes alternativos para personagens.
-- `pontuacoes.json`: Arquivo de pontuação persistente.
-- `Imagens Originais/`: Imagens originais dos personagens.
-- `Imagens Ofuscadas/`: Imagens processadas para o quiz.
-
----
-
-## Como contribuir
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature ou correção
-3. Envie um pull request
-
-Sugestões, issues e contribuições são bem-vindas!
+- `bot.py`: Initializes the bot and loads the commands.
+- `commands/guess_who.py`: Main quiz command.
+- `image_utils.py`: Functions for image manipulation and obfuscation.
+- `pontuacao.py`: User scoring system.
+- `utils.py`: Utilities for alternative names.
+- `nomes_alternativos.json`: List of alternative names for characters.
+- `pontuacoes.json`: Persistent score file.
+- `Imagens Originais/`: Original character images.
+- `Imagens Ofuscadas/`: Processed images for the quiz.
 
 ---
 
-## Licença
+## How to Contribute
 
-Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+1. Fork this repository
+2. Create a branch for your feature or fix
+3. Submit a pull request
+
+Suggestions, issues, and contributions are welcome!
 
 ---
 
-## Observações
+## License
 
-- O bot utiliza a biblioteca [interactions.py](https://github.com/interactions-py/library) para integração com o Discord.
-- Certifique-se de que o bot tem permissões suficientes no servidor para ler e enviar mensagens e anexos.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+## Notes
+
+- The bot uses the [interactions.py](https://github.com/interactions-py/library) library for Discord integration.
+- Make sure the bot has sufficient permissions on the server to read and send messages and attachments.
