@@ -21,9 +21,9 @@ Thumbs.db
 *.log
 *.tmp
 
-# Dados e arquivos sensíveis
+# Sensitive data and files
 config.py
-pontuacoes.json
+scores.json
 
 # Imagens
 Imagens Ofuscadas/
