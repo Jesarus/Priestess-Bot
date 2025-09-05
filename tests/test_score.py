@@ -1,6 +1,4 @@
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import json
 from scores import load_scores, save_scores, DB_PATH
