@@ -9,10 +9,11 @@ bot = interactions.Client(
 
 @bot.event
 async def on_ready():
-    print(f"Bot connected as {bot.me.name}")
 
 
 # Load the slash commands extension
 bot.load_extension("commands.guess_who")
+bot.load_extension("commands.arkdle")
 
+print("Iniciando o bot...")
 bot.start()
