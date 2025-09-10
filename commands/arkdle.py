@@ -1,12 +1,12 @@
 import interactions
 import json
 import random
+import math
+from scores import load_scores, save_scores
 
 OPERATORS_JSON = (
     "c:/Users/user/OneDrive/Área de Trabalho/Priestess-Bot/operators_structured.json"
 )
-
-
 
 
 def load_operators():
@@ -17,7 +17,6 @@ def load_operators():
     except Exception as e:
         print(f"Erro ao carregar operadores: {e}")
         return []
-
 
 
 # Store the current round's operator (shared) and per-user hint index
@@ -32,7 +31,7 @@ class ArkdleGame(interactions.Extension):
     @interactions.slash_command(
         name="arkdle",
         description="Comece uma nova rodada Arkdle com um operador Arknights aleatório.",
-        default_member_permissions=interactions.Permissions.ADMINISTRATOR
+        default_member_permissions=interactions.Permissions.ADMINISTRATOR,
     )
     async def arkdle(self, ctx: interactions.SlashContext):
         global current_operator, user_hint_indices
@@ -40,7 +39,9 @@ class ArkdleGame(interactions.Extension):
         try:
             operators = load_operators()
             if not operators:
-                await ctx.send("Erro ao carregar operadores. Tente novamente mais tarde.")
+                await ctx.send(
+                    "Erro ao carregar operadores. Tente novamente mais tarde."
+                )
                 return
             chosen = random.choice(operators)
             current_operator = chosen
@@ -61,7 +62,9 @@ class ArkdleGame(interactions.Extension):
         except Exception as e:
             print(f"Erro no comando arkdle: {e}")
             try:
-                await ctx.send("Ocorreu um erro ao iniciar o Arkdle. Tente novamente mais tarde.")
+                await ctx.send(
+                    "Ocorreu um erro ao iniciar o Arkdle. Tente novamente mais tarde."
+                )
             except Exception:
                 pass
 
@@ -81,7 +84,8 @@ class ArkdleGame(interactions.Extension):
         try:
             if not current_operator:
                 await ctx.send(
-                    "No Arkdle round in progress. Use /arkdle to start one.", ephemeral=True
+                    "No Arkdle round in progress. Use /arkdle to start one.",
+                    ephemeral=True,
                 )
                 return
             user_id = ctx.author.id
@@ -98,9 +102,21 @@ class ArkdleGame(interactions.Extension):
             hint_index = user_hint_indices.get(user_id, 1)
             correct_name = current_operator["name"].lower()
             if guess.strip().lower() == correct_name:
+                
                 hints_used = user_hint_indices.get(user_id, 1)
+                pontos = math.ceil(20 / hints_used)
+                # Atualiza scores.json
+                scores = load_scores()
+                username = str(ctx.author)
+                if str(user_id) in scores:
+                    scores[str(user_id)]["pontos"] += pontos
+                    scores[str(user_id)]["username"] = username
+                else:
+                    scores[str(user_id)] = {"username": username, "pontos": pontos}
+                save_scores(scores)
                 await ctx.send(
-                    f"Correto! O operador era {current_operator['name']}. Você usou {hints_used} dica(s) para acertar.", ephemeral=True
+                    f"Correto! O operador era {current_operator['name']}. Você usou {hints_used} dica(s) para acertar e ganhou {pontos} ponto(s)!",
+                    ephemeral=True,
                 )
                 # Não encerra a rodada, permite que outros continuem tentando
             else:
@@ -120,7 +136,10 @@ class ArkdleGame(interactions.Extension):
         except Exception as e:
             print(f"Erro no comando arkdle_guess: {e}")
             try:
-                await ctx.send("Ocorreu um erro ao processar seu palpite. Tente novamente mais tarde.", ephemeral=True)
+                await ctx.send(
+                    "Ocorreu um erro ao processar seu palpite. Tente novamente mais tarde.",
+                    ephemeral=True,
+                )
             except Exception:
                 pass
 
