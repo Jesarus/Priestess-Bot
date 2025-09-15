@@ -158,7 +158,7 @@ class GuessWhoGame(interactions.Extension):
         await start_new_round(ctx)
 
     @interactions.slash_command(
-        name="responder", description="Dê seu palpite para a rodada atual."
+        name="guess_who_guess", description="Dê seu palpite para a rodada atual."
     )
     @interactions.slash_option(
         name="palpite",
