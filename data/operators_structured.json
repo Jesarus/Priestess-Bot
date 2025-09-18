@@ -1,0 +1,924 @@
+{
+  "operators": [
+    {
+      "name": "12F",
+      "gender": "Homem",
+      "faction": "Rhodes Island",
+      "rarity": "2 estrelas",
+      "class": "Caster",
+      "subclass": "Splash",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Aak",
+      "gender": "Homem",
+      "faction": "Lee's Detective Agency",
+      "rarity": "6 estrelas",
+      "class": "Specialist",
+      "subclass": "Geek",
+      "nationality": "Lungmen",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Absinthe",
+      "gender": "Mulher",
+      "faction": "Ursus",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Core",
+      "nationality": "Ursus",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Aciddrop",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "4 estrelas",
+      "class": "Sniper",
+      "subclass": "Heavyshooter",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Adnachiel",
+      "gender": "Homem",
+      "faction": "Op Reserve A4",
+      "rarity": "3 estrelas",
+      "class": "Sniper",
+      "subclass": "Marksman",
+      "nationality": "Laterano",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Akafuyu",
+      "gender": "Mulher",
+      "faction": "Higashi",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Soloblade",
+      "nationality": "Higashi",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Almond",
+      "gender": "Mulher",
+      "faction": "Blacksteel",
+      "rarity": "5 estrelas",
+      "class": "Specialist",
+      "subclass": "Hookmaster",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ambriel",
+      "gender": "Mulher",
+      "faction": "Laterano",
+      "rarity": "4 estrelas",
+      "class": "Sniper",
+      "subclass": "Deadeye",
+      "nationality": "Laterano",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Amiya",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Core",
+      "nationality": "Rim Billiton",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Andreana",
+      "gender": "Mulher",
+      "faction": "Abyssal Hunters",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Deadeye",
+      "nationality": "Iberia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Angelina",
+      "gender": "Mulher",
+      "faction": "Siracusa",
+      "rarity": "6 estrelas",
+      "class": "Supporter",
+      "subclass": "Decel Binder",
+      "nationality": "Siracusa",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ansel",
+      "gender": "Homem",
+      "faction": "Op Reserve A4",
+      "rarity": "3 estrelas",
+      "class": "Medic",
+      "subclass": "Medic",
+      "nationality": "Rim Billiton",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Aosta",
+      "gender": "Homem",
+      "faction": "Chiave's Gang",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Spreadshooter",
+      "nationality": "Siracusa",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "April",
+      "gender": "Mulher",
+      "faction": "Rim Billiton",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Marksman",
+      "nationality": "Rim Billiton",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Archetto",
+      "gender": "Mulher",
+      "faction": "Laterano",
+      "rarity": "6 estrelas",
+      "class": "Sniper",
+      "subclass": "Marksman",
+      "nationality": "Laterano",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Arene",
+      "gender": "Homem",
+      "faction": "Laterano",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Lord",
+      "nationality": "Laterano",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Aroma",
+      "gender": "Mulher",
+      "faction": "Siracusa",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Blast",
+      "nationality": "Siracusa",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Asbestos",
+      "gender": "Mulher",
+      "faction": "Rim Billiton",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Arts Protector",
+      "nationality": "Rim Billiton",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ascalon",
+      "gender": "Mulher",
+      "faction": "S.W.E.E.P.",
+      "rarity": "6 estrelas",
+      "class": "Specialist",
+      "subclass": "Ambusher",
+      "nationality": "Kazdel",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ash",
+      "gender": "Mulher",
+      "faction": "Team Rainbow",
+      "rarity": "6 estrelas",
+      "class": "Sniper",
+      "subclass": "Marksman",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Ashlock",
+      "gender": "Mulher",
+      "faction": "Pinus Sylvestris",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Fortress",
+      "nationality": "Kazimierz",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Astesia",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Arts Fighter",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Astgenne",
+      "gender": "Mulher",
+      "faction": "Rhine Lab",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Chain",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Aurora",
+      "gender": "Mulher",
+      "faction": "Karlan Trade",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Duelist",
+      "nationality": "Kjerag",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ayerscarpe",
+      "gender": "Homem",
+      "faction": "Rim Billiton",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Lord",
+      "nationality": "Rim Billiton",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Bagpipe",
+      "gender": "Mulher",
+      "faction": "Victoria",
+      "rarity": "6 estrelas",
+      "class": "Vanguard",
+      "subclass": "Charger",
+      "nationality": "Victoria",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Bassline",
+      "gender": "Homem",
+      "faction": "Leithanien",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Guardian",
+      "nationality": "Leithanien",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Beagle",
+      "gender": "Mulher",
+      "faction": "Op Reserve A1",
+      "rarity": "3 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Bolívar",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Beanstalk",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "4 estrelas",
+      "class": "Vanguard",
+      "subclass": "Tactician",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Beehunter",
+      "gender": "Mulher",
+      "faction": "Ursus",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Fighter",
+      "nationality": "Ursus",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Beeswax",
+      "gender": "Mulher",
+      "faction": "Sargon",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Phalanx",
+      "nationality": "Sargon",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Bena",
+      "gender": "Mulher",
+      "faction": "Victoria",
+      "rarity": "5 estrelas",
+      "class": "Specialist",
+      "subclass": "Dollkeeper",
+      "nationality": "Victoria",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Bibeak",
+      "gender": "Mulher",
+      "faction": "Sami",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Swordmaster",
+      "nationality": "Sami",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Bison",
+      "gender": "Homem",
+      "faction": "Lungmen",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Lungmen",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Blacknight",
+      "gender": "Mulher",
+      "faction": "Rim Billiton",
+      "rarity": "5 estrelas",
+      "class": "Vanguard",
+      "subclass": "Tactician",
+      "nationality": "Rim Billiton",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Blaze",
+      "gender": "Mulher",
+      "faction": "Elite Op",
+      "rarity": "6 estrelas",
+      "class": "Guard",
+      "subclass": "Centurion",
+      "nationality": "Desconhecido",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Blemishine",
+      "gender": "Mulher",
+      "faction": "Kazimierz",
+      "rarity": "6 estrelas",
+      "class": "Defender",
+      "subclass": "Guardian",
+      "nationality": "Kazimierz",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Blitz",
+      "gender": "Homem",
+      "faction": "Team Rainbow",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Sentry Protector",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Blue Poison",
+      "gender": "Mulher",
+      "faction": "Iberia",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Marksman",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Bobbing",
+      "gender": "Homem",
+      "faction": "Columbia",
+      "rarity": "5 estrelas",
+      "class": "Supporter",
+      "subclass": "Ritualist",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Breeze",
+      "gender": "Mulher",
+      "faction": "Victoria",
+      "rarity": "5 estrelas",
+      "class": "Medic",
+      "subclass": "Multi-target",
+      "nationality": "Victoria",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Broca",
+      "gender": "Homem",
+      "faction": "Chiave's Gang",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Centurion",
+      "nationality": "Siracusa",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Bryophyta",
+      "gender": "Homem",
+      "faction": "Siesta",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Instructor",
+      "nationality": "Siesta",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Bubble",
+      "gender": "Mulher",
+      "faction": "Sargon",
+      "rarity": "4 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Sargon",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Cantabile",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "5 estrelas",
+      "class": "Vanguard",
+      "subclass": "Agent",
+      "nationality": "Bolívar",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Caper",
+      "gender": "Mulher",
+      "faction": "Bolívar",
+      "rarity": "4 estrelas",
+      "class": "Sniper",
+      "subclass": "Loopshooter  ",
+      "nationality": "Bolívar",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Cardigan",
+      "gender": "Mulher",
+      "faction": "Op Reserve A4",
+      "rarity": "3 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Leithanien",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Carnelian",
+      "gender": "Mulher",
+      "faction": "Leithanien",
+      "rarity": "6 estrelas",
+      "class": "Caster",
+      "subclass": "Phalanx",
+      "nationality": "Sargon",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Castle-3",
+      "gender": "Robot",
+      "faction": "Rhodes Island",
+      "rarity": "1 estrela",
+      "class": "Guard",
+      "subclass": "Dreadnought",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Catapult",
+      "gender": "Mulher",
+      "faction": "Op Reserve A6",
+      "rarity": "3 estrelas",
+      "class": "Sniper",
+      "subclass": "Artilleryman",
+      "nationality": "Kazimierz",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Catherine",
+      "gender": "Mulher",
+      "faction": "Victoria",
+      "rarity": "5 estrelas",
+      "class": "Supporter",
+      "subclass": "Artificer",
+      "nationality": "Victoria",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Cement",
+      "gender": "Mulher",
+      "faction": "Rim Billiton",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Duelist",
+      "nationality": "Rim Billiton",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Ceobe",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "6 estrelas",
+      "class": "Caster",
+      "subclass": "Core",
+      "nationality": "Bolívar",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ceylon",
+      "gender": "Mulher",
+      "faction": "Siesta",
+      "rarity": "5 estrelas",
+      "class": "Medic",
+      "subclass": "Therapist",
+      "nationality": "Siesta",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Ch'en",
+      "gender": "Mulher",
+      "faction": "Lungmen Guard Department",
+      "rarity": "6 estrelas",
+      "class": "Guard",
+      "subclass": "Swordmaster",
+      "nationality": "Lungmen",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Chestnut",
+      "gender": "Homem",
+      "faction": "Rhodes Island",
+      "rarity": "4 estrelas",
+      "class": "Medic",
+      "subclass": "Wandering",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Chiave",
+      "gender": "Homem",
+      "faction": "Chiave's Gang",
+      "rarity": "5 estrelas",
+      "class": "Vanguard",
+      "subclass": "Pioneer",
+      "nationality": "Siracusa",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Chilchuck",
+      "gender": "Homem",
+      "faction": "Laios's Party",
+      "rarity": "5 estrelas",
+      "class": "Vanguard",
+      "subclass": "Agent",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Chongyue",
+      "gender": "Homem",
+      "faction": "Sui",
+      "rarity": "6 estrelas",
+      "class": "Guard",
+      "subclass": "Fighter",
+      "nationality": "Yan",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Civilight Eterna",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "6 estrelas",
+      "class": "Supporter",
+      "subclass": "Bard",
+      "nationality": "Kazdel",
+      "infection_status": "Desconhecido"
+    },
+    {
+      "name": "Click",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "4 estrelas",
+      "class": "Caster",
+      "subclass": "Mech-Accord",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Cliffheart",
+      "gender": "Mulher",
+      "faction": "Karlan Trade",
+      "rarity": "5 estrelas",
+      "class": "Specialist",
+      "subclass": "Hookmaster",
+      "nationality": "Kjerag",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Coldshot",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Hunter",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Contrail",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "4 estrelas",
+      "class": "Specialist",
+      "subclass": "Skyranger",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Conviction",
+      "gender": "Conviction",
+      "faction": "Minos",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Dreadnought",
+      "nationality": "Minos",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Corroserum",
+      "gender": "Homem",
+      "faction": "Columbia",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Blast",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Courier",
+      "gender": "Homem",
+      "faction": "Karlan Trade",
+      "rarity": "4 estrelas",
+      "class": "Vanguard",
+      "subclass": "Pioneer",
+      "nationality": "Kjerag",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Croissant",
+      "gender": "Mulher",
+      "faction": "Penguins Logistics",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Minos",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Crownslayer",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "6 estrelas",
+      "class": "Specialist",
+      "subclass": "Executor",
+      "nationality": "Ursus",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Cuora",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "4 estrelas",
+      "class": "Defender",
+      "subclass": "Protector",
+      "nationality": "Desconhecido",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Cutter",
+      "gender": "Mulher",
+      "faction": "Columbia",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Swordmaster",
+      "nationality": "Columbia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Czerny",
+      "gender": "Homem",
+      "faction": "Leithanien",
+      "rarity": "5 estrelas",
+      "class": "Defender",
+      "subclass": "Arts Protector",
+      "nationality": "Leithanien",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Dagda",
+      "gender": "Mulher",
+      "faction": "Glasgow",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Fighter",
+      "nationality": "Victoria",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Deepcolor",
+      "gender": "Mulher",
+      "faction": "Aegir",
+      "rarity": "4 estrelas",
+      "class": "Supporter",
+      "subclass": "Summoner",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Degenbrecher",
+      "gender": "Mulher",
+      "faction": "Karlan Trade",
+      "rarity": "6 estrelas",
+      "class": "Guard",
+      "subclass": "Swordmaster",
+      "nationality": "Leithanien",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Delphine",
+      "gender": "Mulher",
+      "faction": "Victoria",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Mystic",
+      "nationality": "Victoria",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Diamante",
+      "gender": "Homem",
+      "faction": "Leithanien",
+      "rarity": "5 estrelas",
+      "class": "Caster",
+      "subclass": "Primal",
+      "nationality": "Leithanien",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Dobermann",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Instructor",
+      "nationality": "Bolívar",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Doc",
+      "gender": "Homem",
+      "faction": "Team Rainbow",
+      "rarity": "5 estrelas",
+      "class": "Guard",
+      "subclass": "Instructor",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Dorothy",
+      "gender": "Mulher",
+      "faction": "Rhine Lab",
+      "rarity": "6 estrelas",
+      "class": "Specialist",
+      "subclass": "Trapmaster",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Dur-nar",
+      "gender": "Mulher",
+      "faction": "Rhodes Island",
+      "rarity": "4 estrelas",
+      "class": "Defender",
+      "subclass": "Arts Protector",
+      "nationality": "Columbia",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Durin",
+      "gender": "Mulher",
+      "faction": "Op A4",
+      "rarity": "2 estrelas",
+      "class": "Caster",
+      "subclass": "Core",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Dusk",
+      "gender": "Mulher",
+      "faction": "Sui",
+      "rarity": "6 estrelas",
+      "class": "Caster",
+      "subclass": "Splash",
+      "nationality": "Yan",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Earthspirit",
+      "gender": "Mulher",
+      "faction": "Leithanien",
+      "rarity": "4 estrelas",
+      "class": "Supporter",
+      "subclass": "Decel Binder",
+      "nationality": "Leithanien",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ebenholz",
+      "gender": "Homem",
+      "faction": "Leithanien",
+      "rarity": "6 estrelas",
+      "class": "Caster",
+      "subclass": "Mystic",
+      "nationality": "Leithanien",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ela",
+      "gender": "Mulher",
+      "faction": "Team Rainbow",
+      "rarity": "6 estrelas",
+      "class": "Specialist",
+      "subclass": "Trapmaster",
+      "nationality": "Desconhecido",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Elysium",
+      "gender": "Homem",
+      "faction": "Rhodes Island",
+      "rarity": "5 estrelas",
+      "class": "Vanguard",
+      "subclass": "Standard Bearer",
+      "nationality": "Iberia",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Enforcer",
+      "gender": "Homem",
+      "faction": "Laterano",
+      "rarity": "5 estrelas",
+      "class": "Specialist",
+      "subclass": "Push Stroker",
+      "nationality": "Laterano",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Erato",
+      "gender": "Mulher",
+      "faction": "Minos",
+      "rarity": "5 estrelas",
+      "class": "Sniper",
+      "subclass": "Besieger",
+      "nationality": "Minos",
+      "infection_status": "Não Infectado"
+    },
+    {
+      "name": "Estelle",
+      "gender": "Mulher",
+      "faction": "Sargon",
+      "rarity": "4 estrelas",
+      "class": "Guard",
+      "subclass": "Centurion",
+      "nationality": "Desconhecido",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Ethan",
+      "gender": "Homem",
+      "faction": "Rhodes Island",
+      "rarity": "4 estrelas",
+      "class": "Specialist",
+      "subclass": "Ambusher",
+      "nationality": "Desconhecido",
+      "infection_status": "Infectado"
+    },
+    {
+      "name": "Eunectes",
+      "gender": "Mulher",
+      "faction": "Sargon",
+      "rarity": "6 estrelas",
+      "class": "Defender",
+      "subclass": "Duelist",
+      "nationality": "Sargon",
+      "infection_status": "Infectado"
+    }
+  ]
+}
