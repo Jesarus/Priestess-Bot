@@ -1,7 +1,7 @@
 import json
 import os
 
-DB_PATH = "scores.json"
+DB_PATH = "data/scores.json"
 
 def load_scores():
     """

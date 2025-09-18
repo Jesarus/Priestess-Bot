@@ -5,9 +5,7 @@ import math
 import logging
 from scores import load_scores, save_scores
 
-OPERATORS_JSON = (
-    "c:/Users/user/OneDrive/Área de Trabalho/Priestess-Bot/operators_structured.json"
-)
+OPERATORS_JSON = "data/operators_structured.json"
 
 
 def load_operators():
