@@ -4,87 +4,85 @@
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A Discord bot for server management and fun interactions related to the game **Arknights**, such as:
-- Character guessing quizzes with a scoring system, image manipulation, and support for alternative names.
+A Discord bot for server management and fun interactions related to the game **Arknights**.
 
 ---
 
-## Priestess-Bot Highlights
+## ✨ Main Features
 
-- **Modern Slash Commands:** Uses Discord slash commands for an intuitive and integrated experience.
-- **Image Integration:** Automatically generates and manipulates images, creating unique visual quizzes.
-- **Interactive Game:** “Guess Who” mode challenges users to guess characters from silhouettes.
-- **Real-Time Ranking:** Persistent scoring system and leaderboard for top players.
-- **Alternative Names:** Accepts multiple correct answers for greater accessibility.
-- **Private (ephemeral) responses:** Ensures privacy and a modern user experience.
-- **Clean and tested code:** Modular structure, automated tests, and best practices.
-
----
-
-## Features
-
-- **Guess Who Game:** Sends an obscured image of a character and challenges users to guess who it is.
-- **Scoring system:** Persistent scores for participants.
-- **Alternative names:** Accepts different names for the same character.
-- **Automatic silhouette generation:** Creates obscured images from the originals.
+- **Modern Slash Commands**
+- **“Guess Who” Quiz with Obscured Images**
+- **Arkdle Minigame**
+- **Persistent Scoring System and Ranking**
+- **Alternative Names Support**
+- **Private (ephemeral) responses**
+- **Modular structure and best practices**
 
 ---
 
-## Usage Example
+## 📦 Project Structure
 
-```
-/guess_who
-```
-The bot replies with a silhouette image and waits for users' answers.
-
-[See an example image](https://drive.google.com/file/d/1VeAJHNcv65lXXQJEl6S9bsz9iJm8nBU4/view?usp=sharing)
+- `bot.py`: Initializes the bot and loads commands
+- `config.py`: Loads environment variables and folder names
+- `db.py`: (If present) Data utilities
+- `scores.py`: Scoring system (uses `data/scores.json`)
+- `image_utils.py`: Image manipulation and obfuscation
+- `utils.py`: Utilities and alternative names
+- `commands/`: Command modules (`guess_who.py`, `arkdle.py`, `ranking.py`, `sextou.py`)
+- `data/`: Persistent data (`scores.json`, `operators_structured.json`)
+- `alternative_names.json`: Alternative character names
+- `Imagens Originais/` and `Imagens Ofuscadas/`: Images for the quizzes
+- `requirements.txt`: Python dependencies
 
 ---
 
 ## Installation
 
-1. **Clone the repository:**
-	```sh
-	git clone https://github.com/Jesarus/Priestess-Bot.git
-	cd Priestess-Bot
-	```
-
-2. **(Optional) Create a virtual environment:**
-	```sh
-	python -m venv venv
-	.\venv\Scripts\activate
-	```
-
-3. **Install dependencies:**
-	```sh
-	pip install -r requirements.txt
-	```
-
-4. **Organize the images:**
-	- Make sure the folders `Imagens Originais` and `Imagens Ofuscadas` are present and organized by character.
-
----
-
-## How to Run
-
-```sh
-python bot.py
-```
-The bot will connect to Discord and be ready to receive commands.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Jesarus/Priestess-Bot.git
+   cd Priestess-Bot
+   ```
+2. (Optional) Create a virtual environment:
+   ```sh
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Organize the images:
+   - Make sure the folders `Imagens Originais` and `Imagens Ofuscadas` are present and organized by character.
+5. Configure the environment variable for the token:
+   - In PowerShell:
+     ```powershell
+     $env:PRIESTESS_BOT_TOKEN = "your_token_here"
+     ```
+   - Never share your token publicly!
+6. Run the bot:
+   ```sh
+   python bot.py
+   ```
 
 ---
 
-## File Structure
+## 🗂️ Persistent Data
 
-- `bot.py`: Initializes the bot and loads the commands.
-- `commands/guess_who.py`: Main quiz command.
-- `image_utils.py`: Functions for image manipulation and obfuscation.
-- `pontuacao.py`: User scoring system.
-- `utils.py`: Utilities for alternative names.
-- `nomes_alternativos.json`: List of alternative names for characters.
-- `pontuacoes.json`: Persistent score file.
-- `Imagens Originais/`: Original character images.
-- `Imagens Ofuscadas/`: Processed images for the quiz.
+- All user scores and operator data are stored in `data/`:
+    - `data/scores.json`: User scores
+    - `data/operators_structured.json`: Operator data for quizzes
+
+---
+
+## 🔒 Security & Best Practices
+
+- Never commit your Discord bot token or sensitive data
+- Use environment variables for secrets
+- Keep dependencies updated
+- Follow PEP8 and use docstrings
+- Use logging for errors/debug
+- Separate data from code (use the `data/` folder)
 
 ---
 
@@ -106,5 +104,15 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Notes
 
+## Security & Best Practices
+
+- **Never commit your Discord bot token or other sensitive data.**
+- Use environment variables for all secrets.
+- Keep your dependencies updated (`requirements.txt`).
+- Use the `data/` folder for all persistent data, never store data in code files.
+- Follow PEP8 and use docstrings for all functions and modules.
+- Use logging (not print) for errors and debug information.
+
+---
 - The bot uses the [interactions.py](https://github.com/interactions-py/library) library for Discord integration.
 - Make sure the bot has sufficient permissions on the server to read and send messages and attachments.
