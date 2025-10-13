@@ -1,5 +1,7 @@
 import interactions
 from scores import load_scores
+from observability import log_command_usage
+
 
 async def show_ranking(ctx):
     scores = load_scores()
@@ -12,6 +14,7 @@ async def show_ranking(ctx):
         msg += f"{i}. {data['username']} — {data['pontos']} ponto(s)\n"
     await ctx.send(msg)
 
+
 class RankingExtension(interactions.Extension):
     def __init__(self, client):
         self.client = client
@@ -19,8 +22,10 @@ class RankingExtension(interactions.Extension):
     @interactions.slash_command(
         name="ranking", description="Exibe o ranking de pontuação dos usuários."
     )
+    @log_command_usage("ranking")
     async def ranking(self, ctx: interactions.SlashContext):
         await show_ranking(ctx)
+
 
 def setup(client):
     return RankingExtension(client)

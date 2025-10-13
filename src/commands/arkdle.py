@@ -4,24 +4,31 @@ import random
 import math
 import logging
 from scores import load_scores, save_scores
+from observability import observability, log_command_usage, monitor_performance
 
 OPERATORS_JSON = "data/operators_structured.json"
 
 
+@monitor_performance("load_operators")
 def load_operators():
     """Carrega operadores do arquivo JSON."""
     try:
         with open(OPERATORS_JSON, encoding="utf-8") as f:
             data = json.load(f)
-        return data["operators"]
+        operators = data["operators"]
+        observability.logger.info(f"Loaded {len(operators)} operators from {OPERATORS_JSON}")
+        return operators
     except FileNotFoundError:
-        logging.error(f"Arquivo não encontrado: {OPERATORS_JSON}")
+        observability.logger.error(f"Arquivo não encontrado: {OPERATORS_JSON}")
+        observability.error_tracker.track_error(FileNotFoundError(f"File not found: {OPERATORS_JSON}"))
         return []
-    except json.JSONDecodeError:
-        logging.error(f"Erro ao decodificar JSON: {OPERATORS_JSON}")
+    except json.JSONDecodeError as e:
+        observability.logger.error(f"Erro ao decodificar JSON: {OPERATORS_JSON}")
+        observability.error_tracker.track_error(e, {'file': OPERATORS_JSON})
         return []
     except Exception as e:
-        logging.error(f"Erro ao carregar operadores: {e}")
+        observability.logger.error(f"Erro ao carregar operadores: {e}")
+        observability.error_tracker.track_error(e, {'operation': 'load_operators'})
         return []
 
 
@@ -89,6 +96,7 @@ class ArkdleGame(interactions.Extension):
         description="Comece uma nova rodada Arkdle com um operador Arknights aleatório.",
         default_member_permissions=interactions.Permissions.ADMINISTRATOR,
     )
+    @log_command_usage("arkdle")
     async def arkdle(self, ctx: interactions.SlashContext):
         """Inicia uma nova rodada do Arkdle (apenas para administradores)."""
         global current_operator, user_hint_indices
@@ -135,6 +143,7 @@ class ArkdleGame(interactions.Extension):
         opt_type=interactions.OptionType.STRING,
         required=True,
     )
+    @log_command_usage("arkdle_guess")
     async def arkdle_guess(self, ctx: interactions.SlashContext, guess: str):
         """Processa o palpite do usuário e atualiza pontuação conforme dicas usadas."""
         global current_operator, user_hint_indices

@@ -1,11 +1,11 @@
 import os
 import random
 import interactions
-import logging
-from config import ORIGINAL_IMAGES_FOLDER, OBSCURED_IMAGES_FOLDER
+from constants import ORIGINAL_IMAGES_FOLDER, OBSCURED_IMAGES_FOLDER
 from utils import load_alternative_names
 from scores import load_scores, save_scores
 from image_utils import obscure_image
+from observability import observability, log_command_usage, monitor_performance
 
 # Global state for the current round (should be improved for production)
 round_state = {"answers": {}, "current_operator": None, "correct_answer": None}
@@ -49,19 +49,32 @@ def choose_operator_image(images):
 
 
 # Helper for preparing the obscured image
+@monitor_performance("prepare_obscured_image")
 def prepare_obscured_image(original_path, dest_folder, random_name):
-    if os.path.exists(dest_folder):
-        for f in os.listdir(dest_folder):
-            if f.lower().endswith((".png", ".jpg", ".jpeg")):
-                try:
-                    os.remove(os.path.join(dest_folder, f))
-                except Exception as e:
-                    logging.error(f"Error removing old image: {f} - {e}")
-    else:
-        os.makedirs(dest_folder)
-    output_path = os.path.join(dest_folder, random_name)
-    obscure_image(original_path, output_path)
-    return output_path
+    try:
+        if os.path.exists(dest_folder):
+            for f in os.listdir(dest_folder):
+                if f.lower().endswith((".png", ".jpg", ".jpeg")):
+                    try:
+                        os.remove(os.path.join(dest_folder, f))
+                    except Exception as e:
+                        observability.logger.error(
+                            f"Error removing old image: {f}",
+                            file=f,
+                            error=str(e)
+                        )
+        else:
+            os.makedirs(dest_folder)
+        output_path = os.path.join(dest_folder, random_name)
+        obscure_image(original_path, output_path)
+        return output_path
+    except Exception as e:
+        observability.error_tracker.track_error(e, {
+            'operation': 'prepare_obscured_image',
+            'original_path': original_path,
+            'dest_folder': dest_folder
+        })
+        raise
 
 
 # Helper for updating round state
@@ -76,31 +89,53 @@ def update_round_state(chosen_folder, output_path):
     round_state["answers"] = {}
 
 
+@monitor_performance("start_new_round")
 async def start_new_round(ctx):
-    if round_state["current_operator"]:
-        await ctx.send("Já há uma rodada em andamento!", ephemeral=True)
-        return
-    base_path = ORIGINAL_IMAGES_FOLDER
-    subfolders = get_operator_folders(base_path)
-    if not subfolders:
-        logging.error("No operator folder found in 'Original Images'.")
-        return
-    chosen_folder = random.choice(subfolders)
-    folder_path = os.path.join(base_path, chosen_folder)
-    images = get_operator_images(folder_path)
-    if not images:
-        logging.error(f"No valid image found in folder '{chosen_folder}'.")
-        return
-    chosen_image, random_name = choose_operator_image(images)
-    original_path = os.path.join(folder_path, chosen_image)
-    dest_folder = os.path.join(OBSCURED_IMAGES_FOLDER, chosen_folder)
-    output_path = prepare_obscured_image(original_path, dest_folder, random_name)
-    update_round_state(chosen_folder, output_path)
-    with open(output_path, "rb") as f:
-        await ctx.send(
-            "Quem é esse operador?",
-            files=interactions.File(f, file_name=random_name),
+    try:
+        if round_state["current_operator"]:
+            await ctx.send("Já há uma rodada em andamento!", ephemeral=True)
+            return
+        
+        base_path = ORIGINAL_IMAGES_FOLDER
+        subfolders = get_operator_folders(base_path)
+        if not subfolders:
+            observability.logger.error("No operator folder found in 'Original Images'.")
+            await ctx.send("Erro: Nenhuma pasta de operador encontrada.", ephemeral=True)
+            return
+        
+        chosen_folder = random.choice(subfolders)
+        folder_path = os.path.join(base_path, chosen_folder)
+        images = get_operator_images(folder_path)
+        if not images:
+            observability.logger.error(f"No valid image found in folder '{chosen_folder}'.")
+            await ctx.send(f"Erro: Nenhuma imagem válida encontrada na pasta '{chosen_folder}'.", ephemeral=True)
+            return
+        
+        chosen_image, random_name = choose_operator_image(images)
+        original_path = os.path.join(folder_path, chosen_image)
+        dest_folder = os.path.join(OBSCURED_IMAGES_FOLDER, chosen_folder)
+        output_path = prepare_obscured_image(original_path, dest_folder, random_name)
+        update_round_state(chosen_folder, output_path)
+        
+        observability.logger.info(
+            "Started new guess_who round",
+            operator=chosen_folder,
+            user_id=str(ctx.author.id),
+            guild_id=str(ctx.guild.id) if ctx.guild else None
         )
+        
+        with open(output_path, "rb") as f:
+            await ctx.send(
+                "Quem é esse operador?",
+                files=interactions.File(f, file_name=random_name),
+            )
+    except Exception as e:
+        observability.error_tracker.track_error(e, {
+            'operation': 'start_new_round',
+            'user_id': str(ctx.author.id),
+            'guild_id': str(ctx.guild.id) if ctx.guild else None
+        })
+        await ctx.send("Ocorreu um erro ao iniciar a rodada. Tente novamente.", ephemeral=True)
 
 
 async def register_answer(ctx, palpite):
@@ -154,6 +189,7 @@ class GuessWhoGame(interactions.Extension):
         default_member_permissions=interactions.Permissions.ADMINISTRATOR
         | interactions.Permissions.MANAGE_GUILD,
     )
+    @log_command_usage("guess_who")
     async def guess_who(self, ctx: interactions.SlashContext):
         await start_new_round(ctx)
 
@@ -166,6 +202,7 @@ class GuessWhoGame(interactions.Extension):
         opt_type=interactions.OptionType.STRING,
         required=True,
     )
+    @log_command_usage("guess_who_guess")
     async def answer(self, ctx: interactions.SlashContext, palpite: str):
         await register_answer(ctx, palpite)
 
@@ -175,6 +212,7 @@ class GuessWhoGame(interactions.Extension):
         default_member_permissions=interactions.Permissions.ADMINISTRATOR
         | interactions.Permissions.MANAGE_GUILD,
     )
+    @log_command_usage("revelar")
     async def reveal(self, ctx: interactions.SlashContext):
         await reveal_operator(ctx, self.client)
 
